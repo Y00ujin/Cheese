@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         $0.collectionViewLayout = layout
         $0.showsHorizontalScrollIndicator = false
         $0.register(FilterCollectionViewCell.self, forCellWithReuseIdentifier: FilterCollectionViewCell.reuseId)
+        $0.register(FilterAddCollectionViewCell.self, forCellWithReuseIdentifier: FilterAddCollectionViewCell.reuseId)
         $0.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.4)
         $0.isHidden = true
 
@@ -88,8 +89,14 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.reuseId, for: indexPath) as! FilterCollectionViewCell
-        return cell
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterAddCollectionViewCell.reuseId, for: indexPath) as! FilterAddCollectionViewCell
+            
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.reuseId, for: indexPath) as! FilterCollectionViewCell
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
