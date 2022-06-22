@@ -13,7 +13,7 @@ final class CameraHeaderView: UIView {
     
     // MARK: - Properties
     private let size = UIScreen.main.bounds
-    
+
     private lazy var headerView = UIView().then{
         $0.backgroundColor = .white
         $0.layer.applyShadow(x: 0, y: 8, blur: 15)
@@ -40,7 +40,6 @@ final class CameraHeaderView: UIView {
     
     // MARK: - setView Function
     private func setView(){
-        
         addView()
         addLocation()
     }

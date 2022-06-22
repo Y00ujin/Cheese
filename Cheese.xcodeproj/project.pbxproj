@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6AE9DE502863361900C2B9D2 /* CameraHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE4F2863361900C2B9D2 /* CameraHeaderView.swift */; };
 		6AE9DE522863389400C2B9D2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE512863389400C2B9D2 /* Extension.swift */; };
+		6AE9DE55286354C500C2B9D2 /* CameraBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE54286354C500C2B9D2 /* CameraBottomView.swift */; };
 		6AF0D0192863306500848995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D0182863306500848995 /* AppDelegate.swift */; };
 		6AF0D01B2863306500848995 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D01A2863306500848995 /* SceneDelegate.swift */; };
 		6AF0D01D2863306500848995 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D01C2863306500848995 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		56791ABA94BD87C99A6FF208 /* Pods_Cheese.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cheese.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE9DE4F2863361900C2B9D2 /* CameraHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHeaderView.swift; sourceTree = "<group>"; };
 		6AE9DE512863389400C2B9D2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		6AE9DE54286354C500C2B9D2 /* CameraBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBottomView.swift; sourceTree = "<group>"; };
 		6AF0D0152863306500848995 /* Cheese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF0D0182863306500848995 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF0D01A2863306500848995 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6AE9DE53286354AC00C2B9D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AE9DE4F2863361900C2B9D2 /* CameraHeaderView.swift */,
+				6AE9DE54286354C500C2B9D2 /* CameraBottomView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6AF0D00C2863306400848995 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +86,7 @@
 		6AF0D0172863306500848995 /* Cheese */ = {
 			isa = PBXGroup;
 			children = (
+				6AE9DE53286354AC00C2B9D2 /* Views */,
 				6AF0D0182863306500848995 /* AppDelegate.swift */,
 				6AF0D01A2863306500848995 /* SceneDelegate.swift */,
 				6AF0D01C2863306500848995 /* ViewController.swift */,
@@ -82,7 +94,6 @@
 				6AF0D0212863306600848995 /* Assets.xcassets */,
 				6AF0D0232863306600848995 /* LaunchScreen.storyboard */,
 				6AF0D0262863306600848995 /* Info.plist */,
-				6AE9DE4F2863361900C2B9D2 /* CameraHeaderView.swift */,
 				6AE9DE512863389400C2B9D2 /* Extension.swift */,
 			);
 			path = Cheese;
@@ -216,6 +227,7 @@
 				6AF0D01D2863306500848995 /* ViewController.swift in Sources */,
 				6AF0D0192863306500848995 /* AppDelegate.swift in Sources */,
 				6AE9DE502863361900C2B9D2 /* CameraHeaderView.swift in Sources */,
+				6AE9DE55286354C500C2B9D2 /* CameraBottomView.swift in Sources */,
 				6AF0D01B2863306500848995 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
