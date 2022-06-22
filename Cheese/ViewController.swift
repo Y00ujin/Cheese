@@ -33,7 +33,12 @@ class ViewController: UIViewController {
     }
     
     @objc func filterButtonClicked(sender: UIButton){
-        // 토글 버튼 클릭시에 불 값 변경
+        if cameraHeaderView.filterButtonClicked {
+            filterCollectionView.isHidden = true
+        }else{
+            filterCollectionView.isHidden = false
+        }
+        cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
     }
     
     private func setView(){
@@ -88,7 +93,8 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell click")
+        cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
+        filterCollectionView.isHidden = true
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
