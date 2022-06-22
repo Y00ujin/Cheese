@@ -11,6 +11,7 @@ import Then
 
 final class CameraHeaderView: UIView {
     
+    // MARK: - Properties
     private let size = UIScreen.main.bounds
     
     private lazy var headerView = UIView().then{
@@ -26,6 +27,7 @@ final class CameraHeaderView: UIView {
         $0.setImage(UIImage(named: "Cheese_ChangeCameraDirectionImage"), for: .normal)
     }
 
+    // MARK: - View LifeCycles
     override init(frame: CGRect){
         super.init(frame: frame)
         setView()
@@ -36,17 +38,20 @@ final class CameraHeaderView: UIView {
         setView()
     }
     
+    // MARK: - setView Function
     private func setView(){
         
         addView()
         addLocation()
     }
     
+    // MARK: - addView Function
     private func addView(){
         self.addSubview(headerView)
         [filterButton, changeCameraButton].forEach{ self.addSubview($0) }
     }
     
+    // MARK: - addLocation Function
     private func addLocation(){
         headerView.snp.makeConstraints {
             $0.top.right.bottom.left.equalToSuperview()
