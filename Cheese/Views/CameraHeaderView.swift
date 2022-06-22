@@ -19,11 +19,13 @@ final class CameraHeaderView: UIView {
         $0.layer.applyShadow(x: 0, y: 8, blur: 15)
     }
     
-    private lazy var filterButton = UIButton().then{
+    var filterButtonClicked = false
+    
+    lazy var filterButton = UIButton().then{
         $0.setImage(UIImage(named: "Cheese_FilterListImage"), for: .normal)
     }
     
-    private lazy var changeCameraButton = UIButton().then{
+    lazy var changeCameraButton = UIButton().then{
         $0.setImage(UIImage(named: "Cheese_ChangeCameraDirectionImage"), for: .normal)
     }
 
