@@ -40,6 +40,7 @@ final class FilterWayChooseViewController: UIViewController{
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 14)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(writeFilterButtonClicked(sender:)), for: .touchUpInside)
     }
     
     private let pictureFilterButton = UIButton().then{
@@ -49,12 +50,12 @@ final class FilterWayChooseViewController: UIViewController{
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 14)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(pictureFilterButtonClicked(sender:)), for: .touchUpInside)
     }
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         
         setView()
     }

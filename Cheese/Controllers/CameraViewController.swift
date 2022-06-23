@@ -25,7 +25,6 @@ final class CameraViewController: UIViewController {
         $0.register(FilterAddCollectionViewCell.self, forCellWithReuseIdentifier: FilterAddCollectionViewCell.reuseId)
         $0.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.4)
         $0.isHidden = true
-
     }
     
     override func viewDidLoad() {
