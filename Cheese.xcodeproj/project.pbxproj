@@ -19,6 +19,7 @@
 		6AE9DE6E2863F21D00C2B9D2 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE6D2863F21D00C2B9D2 /* FilterHeaderView.swift */; };
 		6AE9DE702863F22600C2B9D2 /* FilterBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE6F2863F22600C2B9D2 /* FilterBottomView.swift */; };
 		6AE9DE722863F63200C2B9D2 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE712863F63200C2B9D2 /* ColorCollectionViewCell.swift */; };
+		6AE9DE742863FBAD00C2B9D2 /* SaveModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE732863FBAD00C2B9D2 /* SaveModalView.swift */; };
 		6AF0D0192863306500848995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D0182863306500848995 /* AppDelegate.swift */; };
 		6AF0D01B2863306500848995 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D01A2863306500848995 /* SceneDelegate.swift */; };
 		6AF0D01D2863306500848995 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D01C2863306500848995 /* CameraViewController.swift */; };
@@ -41,6 +42,7 @@
 		6AE9DE6D2863F21D00C2B9D2 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		6AE9DE6F2863F22600C2B9D2 /* FilterBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBottomView.swift; sourceTree = "<group>"; };
 		6AE9DE712863F63200C2B9D2 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AE9DE732863FBAD00C2B9D2 /* SaveModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveModalView.swift; sourceTree = "<group>"; };
 		6AF0D0152863306500848995 /* Cheese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF0D0182863306500848995 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF0D01A2863306500848995 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				6AE9DE54286354C500C2B9D2 /* CameraBottomView.swift */,
 				6AE9DE6D2863F21D00C2B9D2 /* FilterHeaderView.swift */,
 				6AE9DE6F2863F22600C2B9D2 /* FilterBottomView.swift */,
+				6AE9DE732863FBAD00C2B9D2 /* SaveModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				6AF0D01D2863306500848995 /* CameraViewController.swift in Sources */,
 				6AF0D0192863306500848995 /* AppDelegate.swift in Sources */,
 				6AE9DE6B2863F11900C2B9D2 /* FilterPictureViewController.swift in Sources */,
+				6AE9DE742863FBAD00C2B9D2 /* SaveModalView.swift in Sources */,
 				6AE9DE6E2863F21D00C2B9D2 /* FilterHeaderView.swift in Sources */,
 				6AE9DE502863361900C2B9D2 /* CameraHeaderView.swift in Sources */,
 				6AE9DE55286354C500C2B9D2 /* CameraBottomView.swift in Sources */,

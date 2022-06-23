@@ -12,6 +12,7 @@ class FilterWriteViewController: UIViewController {
     // MARK: - Properties
     private let filterHeaderView = FilterHeaderView().then{
         $0.backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: .touchUpInside)
+        $0.filterSaveButton.addTarget(self, action: #selector(filterSaveButtonClicked(sender:)), for: .touchUpInside)
     }
     private let filterBottomView = FilterBottomView()
 
@@ -53,5 +54,15 @@ class FilterWriteViewController: UIViewController {
     // MARK: - Targets
     @objc private func backButtonClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func filterSaveButtonClicked(sender: UIButton){
+        let alert = UIAlertController(title: "저장 완료!", message: "필터가 저장되었습니다.", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alert.dismiss(animated: true, completion: nil)} )
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.7) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

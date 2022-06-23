@@ -102,10 +102,11 @@ extension CameraViewController:UICollectionViewDelegate, UICollectionViewDataSou
         if indexPath.row == 0 {
             let vc = FilterWayChooseViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-        }else{
-            cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
-            filterCollectionView.isHidden = true
         }
+        
+        cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
+        filterCollectionView.isHidden = true
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
