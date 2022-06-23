@@ -15,9 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = UINavigationController(rootViewController: FilterWayChooseViewController())
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
+        
+        for fontFaily in UIFont.familyNames{
+            for fontName in UIFont.fontNames(forFamilyName: fontFaily){
+                print(fontName)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

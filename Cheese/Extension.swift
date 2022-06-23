@@ -9,8 +9,8 @@ import UIKit
 
 // MARK: - Shadow extension
 extension CALayer {
-    func applyShadow(alpha: Float = 0.1, x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat = 0){
-        shadowColor = UIColor(red: 160/255, green: 160/255, blue: 160/255, alpha: 1).cgColor
+    func applyShadow(color: CGColor = UIColor(red: 160/255, green: 160/255, blue: 160/255, alpha: 1).cgColor, alpha: Float = 0.1, x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat = 0){
+        shadowColor = color
         shadowOpacity = alpha
         shadowOffset = CGSize(width: x, height: y)
         shadowRadius = blur/UIScreen.main.scale

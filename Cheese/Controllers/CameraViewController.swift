@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CameraViewController.swift
 //  Cheese
 //
 //  Created by 김유진 on 2022/06/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class CameraViewController: UIViewController {
     
     // MARK: - Properties
     private let cameraHeaderView = CameraHeaderView().then{
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension CameraViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 21
@@ -100,8 +100,13 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
-        filterCollectionView.isHidden = true
+        if indexPath.row == 0 {
+            let vc = FilterWayChooseViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
+            filterCollectionView.isHidden = true
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
