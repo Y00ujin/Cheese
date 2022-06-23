@@ -30,6 +30,7 @@ final class FilterWayChooseViewController: UIViewController{
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 14)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(drawFilterButtonClicked(sender:)), for: .touchUpInside)
     }
     
     private let writeFilterButton = UIButton().then{
@@ -104,5 +105,20 @@ final class FilterWayChooseViewController: UIViewController{
             $0.width.equalToSuperview().dividedBy(1.3)
             $0.height.equalToSuperview().dividedBy(7)
         }
+    }
+    
+    @objc func drawFilterButtonClicked(sender: UIButton){
+        let vc = FilterDrawViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func writeFilterButtonClicked(sender: UIButton){
+        let vc = FilterWriteViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func pictureFilterButtonClicked(sender: UIButton){
+        let vc = FilterPictureViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
