@@ -14,7 +14,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
     
     private let size = UIScreen.main.bounds
     
-    private lazy var cellBackgroundView = UIView().then{
+    lazy var cellBackgroundView = UIView().then{
         $0.backgroundColor = .white
     }
     

@@ -12,19 +12,19 @@ final class FilterWayChooseViewController: UIViewController{
     // MARK: - Properties
     private let size = UIScreen.main.bounds
     
-    private let cheeseTitleLabel = UILabel().then{
+    private lazy var cheeseTitleLabel = UILabel().then{
         $0.text = "Cheese"
         $0.textColor = UIColor(red: 238/255, green: 207/255, blue: 98/255, alpha: 1)
         $0.font = UIFont(name: "AmericanTypewriter-Bold", size: 35)
     }
     
-    private let cheeseSubTitleLabel = UILabel().then{
+    private lazy var cheeseSubTitleLabel = UILabel().then{
         $0.text = "필터 생성 방법을 선택해주세요."
         $0.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 17)
         $0.textColor = UIColor.black
     }
     
-    private let drawFilterButton = UIButton().then{
+    private lazy var drawFilterButton = UIButton().then{
         $0.backgroundColor = .white
         $0.layer.applyShadow(color: UIColor.black.cgColor, x: 0, y: 4, blur: 20)
         $0.setTitle("그림으로 필터만들기", for: .normal)
@@ -34,7 +34,7 @@ final class FilterWayChooseViewController: UIViewController{
         $0.addTarget(self, action: #selector(drawFilterButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let writeFilterButton = UIButton().then{
+    private lazy var writeFilterButton = UIButton().then{
         $0.backgroundColor = .white
         $0.layer.applyShadow(color: UIColor.black.cgColor, x: 0, y: 4, blur: 20)
         $0.setTitle("글로 필터만들기", for: .normal)
@@ -44,7 +44,7 @@ final class FilterWayChooseViewController: UIViewController{
         $0.addTarget(self, action: #selector(writeFilterButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let pictureFilterButton = UIButton().then{
+    private lazy var pictureFilterButton = UIButton().then{
         $0.backgroundColor = .white
         $0.layer.applyShadow(color: UIColor.black.cgColor, x: 0, y: 4, blur: 20)
         $0.setTitle("사진으로 필터만들기", for: .normal)

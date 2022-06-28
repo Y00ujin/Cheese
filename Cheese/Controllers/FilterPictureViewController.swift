@@ -10,11 +10,11 @@ import UIKit
 class FilterPictureViewController: UIViewController {
 
     // MARK: - Properties
-    private let filterHeaderView = FilterHeaderView().then{
+    private lazy var filterHeaderView = FilterHeaderView().then{
         $0.backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: .touchUpInside)
         $0.filterSaveButton.addTarget(self, action: #selector(filterSaveButtonClicked(sender:)), for: .touchUpInside)
     }
-    private let filterBottomView = FilterBottomView()
+    private lazy var filterBottomView = FilterBottomView()
 
     // MARK: - LifeCycles
     override func viewDidLoad() {

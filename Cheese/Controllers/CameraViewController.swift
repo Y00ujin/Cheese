@@ -10,13 +10,13 @@ import UIKit
 final class CameraViewController: UIViewController {
     
     // MARK: - Properties
-    private let cameraHeaderView = CameraHeaderView().then{
+    private lazy var cameraHeaderView = CameraHeaderView().then{
         $0.filterButton.addTarget(self, action: #selector(filterButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let cameraBottomView = CameraBottomView()
+    private lazy var cameraBottomView = CameraBottomView()
     
-    private var filterCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then{
+    private lazy var filterCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then{
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 20
         $0.collectionViewLayout = layout

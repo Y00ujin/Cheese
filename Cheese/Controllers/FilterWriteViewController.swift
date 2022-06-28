@@ -10,14 +10,14 @@ import UIKit
 class FilterWriteViewController: UIViewController {
     
     // MARK: - Properties
-    private let filterHeaderView = FilterHeaderView().then{
+    private lazy var filterHeaderView = FilterHeaderView().then{
         $0.backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: .touchUpInside)
         $0.filterSaveButton.addTarget(self, action: #selector(filterSaveButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let filterBottomView = FilterBottomView()
+    private lazy var filterBottomView = FilterBottomView()
     
-    private let inputTextField = UITextField().then{
+    private lazy var inputTextField = UITextField().then{
         $0.placeholder = "글씨를 입력해주세요."
         $0.backgroundColor = UIColor.rgb(r: 245, g: 245, b: 245)
         $0.textAlignment = .center
@@ -25,14 +25,14 @@ class FilterWriteViewController: UIViewController {
         $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 13)
     }
     
-    private var textLabel = UILabel().then{
+    private lazy var textLabel = UILabel().then{
         $0.text = ""
         $0.isHidden = true
         $0.textColor = UIColor.black
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 13)
     }
     
-    private let createTextButton = UIButton().then{
+    private lazy var createTextButton = UIButton().then{
         $0.setTitle("글씨 생성하기", for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 11)
         $0.layer.cornerRadius = 10
@@ -41,7 +41,7 @@ class FilterWriteViewController: UIViewController {
         $0.addTarget(self, action: #selector(createTextButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let upSizeButton = UIButton().then{
+    private lazy var upSizeButton = UIButton().then{
         $0.setTitle("T", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 14)
@@ -50,7 +50,7 @@ class FilterWriteViewController: UIViewController {
         $0.addTarget(self, action: #selector(upSizeButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let downSizeButton = UIButton().then{
+    private lazy var downSizeButton = UIButton().then{
         $0.setTitle("T", for: .normal)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 11)

@@ -19,7 +19,7 @@ final class CameraHeaderView: UIView {
         $0.layer.applyShadow(x: 0, y: 8, blur: 15)
     }
     
-    var filterButtonClicked = false
+    lazy var filterButtonClicked = false
     
     lazy var filterButton = UIButton().then{
         $0.setImage(UIImage(named: "Cheese_FilterListImage"), for: .normal)

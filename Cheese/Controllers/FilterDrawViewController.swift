@@ -12,22 +12,22 @@ class FilterDrawViewController: UIViewController {
     // MARK: - Properties
     private let size = UIScreen.main.bounds
     
-    private let drawCanvasImageView = UIImageView()
+    private lazy var drawCanvasImageView = UIImageView()
     
-    var lastPoint: CGPoint!
+    private var lastPoint: CGPoint!
     
-    var lineSize:CGFloat = 5
+    private lazy var lineSize: CGFloat = 5
     
-    var lineColor = UIColor.black.cgColor
+    private lazy var lineColor = UIColor.black.cgColor
     
-    private let filterBottomView = FilterBottomView()
+    private lazy var filterBottomView = FilterBottomView()
     
-    private let filterHeaderView = FilterHeaderView().then{
+    private lazy var filterHeaderView = FilterHeaderView().then{
         $0.backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: .touchUpInside)
         $0.filterSaveButton.addTarget(self, action: #selector(filterSaveButtonClicked(sender:)), for: .touchUpInside)
     }
     
-    private let colorCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then{
+    private lazy var colorCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then{
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 13
         layout.scrollDirection = .horizontal
@@ -36,7 +36,7 @@ class FilterDrawViewController: UIViewController {
         $0.register(ColorCollectionViewCell.self, forCellWithReuseIdentifier: ColorCollectionViewCell.reuseId)
     }
     
-    private let colorArray = [UIColor.rgb(r: 237, g: 177, b: 177),UIColor.rgb(r: 237, g: 206, b: 177),UIColor.rgb(r: 237, g: 231, b: 177),UIColor.rgb(r: 225, g: 237, b: 177),UIColor.rgb(r: 178, g: 237, b: 177),UIColor.rgb(r: 177, g: 237, b: 177),UIColor.rgb(r: 177, g: 222, b: 237),UIColor.rgb(r: 177, g: 187, b: 237),UIColor.rgb(r: 218, g: 177, b: 237)]
+    private lazy var colorArray = [UIColor.rgb(r: 237, g: 177, b: 177),UIColor.rgb(r: 237, g: 206, b: 177),UIColor.rgb(r: 237, g: 231, b: 177),UIColor.rgb(r: 225, g: 237, b: 177),UIColor.rgb(r: 178, g: 237, b: 177),UIColor.rgb(r: 177, g: 237, b: 177),UIColor.rgb(r: 177, g: 222, b: 237),UIColor.rgb(r: 177, g: 187, b: 237),UIColor.rgb(r: 218, g: 177, b: 237)]
 
     // MARK: - LifeCycles
     override func viewDidLoad() {
