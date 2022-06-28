@@ -8,6 +8,7 @@
 import UIKit
 
 class FilterAddCollectionViewCell: UICollectionViewCell {
+    
     // MARK: - Properties
     static let reuseId = "\(FilterAddCollectionViewCell.self)"
     
@@ -32,6 +33,7 @@ class FilterAddCollectionViewCell: UICollectionViewCell {
         setView()
     }
     
+    // MARK: - Helpers
     private func setView(){
         addView()
         addLocation()

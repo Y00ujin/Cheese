@@ -27,20 +27,13 @@ final class CameraViewController: UIViewController {
         $0.isHidden = true
     }
     
+    // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
     }
     
-    @objc func filterButtonClicked(sender: UIButton){
-        if cameraHeaderView.filterButtonClicked {
-            filterCollectionView.isHidden = true
-        }else{
-            filterCollectionView.isHidden = false
-        }
-        cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
-    }
-    
+    // MARK: - Helpers
     private func setView(){
         self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = .white
@@ -78,6 +71,16 @@ final class CameraViewController: UIViewController {
             $0.left.right.equalToSuperview()
             $0.height.equalToSuperview().dividedBy(9.49)
         }
+    }
+    
+    // MARK: - Selectors
+    @objc func filterButtonClicked(sender: UIButton){
+        if cameraHeaderView.filterButtonClicked {
+            filterCollectionView.isHidden = true
+        }else{
+            filterCollectionView.isHidden = false
+        }
+        cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
     }
 }
 

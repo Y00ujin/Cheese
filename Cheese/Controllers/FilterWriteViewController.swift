@@ -66,7 +66,7 @@ class FilterWriteViewController: UIViewController {
         setView()
     }
     
-    // MARK: - setView Function
+    // MARK: - Helpers
     private func setView(){
         view.backgroundColor = .white
         
@@ -74,14 +74,12 @@ class FilterWriteViewController: UIViewController {
         addLocation()
     }
     
-    // MARK: - addView Function
     private func addView(){
         [filterHeaderView, filterBottomView, inputTextField, createTextButton, textLabel, upSizeButton, downSizeButton].forEach{ view.addSubview($0) }
         
         [upSizeButton, downSizeButton].forEach{ filterBottomView.addSubview($0) }
     }
     
-    // MARK: - addLocation()
     private func addLocation(){
         filterHeaderView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(view.frame.height/18.45)
@@ -126,7 +124,7 @@ class FilterWriteViewController: UIViewController {
         }
     }
     
-    // MARK: - Targets
+    // MARK: - Selectors
     @objc private func backButtonClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }

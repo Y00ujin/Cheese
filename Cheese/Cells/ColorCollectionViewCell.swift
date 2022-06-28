@@ -8,6 +8,7 @@
 import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell {
+    
     // MARK: - Properties
     static let reuseId = "\(ColorCollectionViewCell.self)"
     
@@ -28,6 +29,7 @@ class ColorCollectionViewCell: UICollectionViewCell {
         setView()
     }
     
+    // MARK: - Helpers
     private func setView(){
         addView()
         addLocation()

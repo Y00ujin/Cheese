@@ -36,19 +36,17 @@ final class SaveModalView: UIView {
         setView()
     }
     
-    // MARK: - setView Function
+    // MARK: - Helpers
     private func setView(){
         addView()
         addLocation()
     }
     
-    // MARK: - addView Function
     private func addView(){
         self.addSubview(modalBackgroundView)
         modalBackgroundView.addSubview(modalTextLabel)
     }
     
-    // MARK: - addLocation Function
     private func addLocation(){
         modalBackgroundView.snp.makeConstraints {
             $0.width.equalToSuperview().dividedBy(1.42)

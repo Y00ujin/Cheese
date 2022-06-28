@@ -29,6 +29,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
         setView()
     }
     
+    // MARK: - Helpers
     private func setView(){
         addView()
         addLocation()

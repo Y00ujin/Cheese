@@ -28,18 +28,16 @@ class FilterBottomView: UIView {
         setView()
     }
     
-    // MARK: - setView Function
+    // MARK: - Helpers
     private func setView(){
         addView()
         addLocation()
     }
     
-    // MARK: - addView Function
     private func addView(){
         self.addSubview(bottomView)
     }
     
-    // MARK: - addLocation Function
     private func addLocation(){
         bottomView.snp.makeConstraints {
             $0.top.right.bottom.left.equalToSuperview()

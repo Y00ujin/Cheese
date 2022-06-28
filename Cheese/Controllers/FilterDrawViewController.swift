@@ -15,7 +15,9 @@ class FilterDrawViewController: UIViewController {
     private let drawCanvasImageView = UIImageView()
     
     var lastPoint: CGPoint!
+    
     var lineSize:CGFloat = 5
+    
     var lineColor = UIColor.black.cgColor
     
     private let filterBottomView = FilterBottomView()
@@ -103,7 +105,7 @@ class FilterDrawViewController: UIViewController {
         UIGraphicsEndImageContext()
     }
     
-    // MARK: - setView Function
+    // MARK: - Helpers
     private func setView(){
         view.backgroundColor = .white
         
@@ -112,20 +114,17 @@ class FilterDrawViewController: UIViewController {
         addDelegate()
     }
     
-    // MARK: - addDelegate Function
     private func addDelegate(){
         colorCollectionView.delegate = self
         colorCollectionView.dataSource = self
     }
     
-    // MARK: - addView Function
     private func addView(){
         [filterHeaderView, filterBottomView, drawCanvasImageView].forEach{ view.addSubview($0) }
         
         filterBottomView.addSubview(colorCollectionView)
     }
     
-    // MARK: - addLocation()
     private func addLocation(){
         filterHeaderView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(view.frame.height/18.45)
@@ -154,7 +153,7 @@ class FilterDrawViewController: UIViewController {
         }
     }
     
-    // MARK: - Targets
+    // MARK: - Selectors
     @objc private func backButtonClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }

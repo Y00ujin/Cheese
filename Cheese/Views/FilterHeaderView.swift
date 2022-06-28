@@ -24,7 +24,7 @@ class FilterHeaderView: UIView {
         $0.setImage(UIImage(named: "Cheese_FilterSaveButtonImage"), for: .normal)
     }
 
-    // MARK: - View LifeCycles
+    // MARK: - LifeCycles
     override init(frame: CGRect){
         super.init(frame: frame)
         setView()
@@ -35,19 +35,17 @@ class FilterHeaderView: UIView {
         setView()
     }
     
-    // MARK: - setView Function
+    // MARK: - Helpers
     private func setView(){        
         addView()
         addLocation()
     }
     
-    // MARK: - addView Function
     private func addView(){
         self.addSubview(headerView)
         [backButton, filterSaveButton].forEach{ self.addSubview($0) }
     }
     
-    // MARK: - addLocation Function
     private func addLocation(){
         headerView.snp.makeConstraints {
             $0.top.right.bottom.left.equalToSuperview()

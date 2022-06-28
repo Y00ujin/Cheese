@@ -8,6 +8,7 @@
 import UIKit
 
 final class FilterWayChooseViewController: UIViewController{
+    
     // MARK: - Properties
     private let size = UIScreen.main.bounds
     
@@ -60,6 +61,7 @@ final class FilterWayChooseViewController: UIViewController{
         setView()
     }
     
+    // MARK: - Helpers
     private func setView(){
         self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = .white
@@ -108,6 +110,7 @@ final class FilterWayChooseViewController: UIViewController{
         }
     }
     
+    // MARK: - Selectors
     @objc func drawFilterButtonClicked(sender: UIButton){
         let vc = FilterDrawViewController()
         self.navigationController?.pushViewController(vc, animated: true)
