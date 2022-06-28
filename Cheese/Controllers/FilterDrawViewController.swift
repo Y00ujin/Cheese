@@ -7,7 +7,7 @@
 
 import UIKit
 
-class x: UIViewController {
+class FilterDrawViewController: UIViewController {
     
     // MARK: - Properties
     private let size = UIScreen.main.bounds
