@@ -79,6 +79,7 @@ final class CameraViewController: UIViewController {
             filterCollectionView.isHidden = true
         }else{
             filterCollectionView.isHidden = false
+            UIView.upAnimation(modal: filterCollectionView)
         }
         cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
     }

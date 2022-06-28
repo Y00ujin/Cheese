@@ -26,9 +26,24 @@ extension CALayer {
     }
 }
 
-// MARK: - rgb extension
+// MARK: - UIColor rgb extension
 extension UIColor{
     static func rgb(r: CGFloat ,g: CGFloat,b:CGFloat) -> UIColor{
         return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
 }
+
+// MARK: - UIView animation extension
+extension UIView{
+    static func upAnimation(modal: UIView){
+        UIView.animate(withDuration: 0.5,
+                      delay: 0,
+                      options: .curveEaseInOut,
+                      animations: { () -> Void in
+                       modal.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+       },
+                      completion: { (didFinish) -> Void in
+       })
+    }
+}
+
