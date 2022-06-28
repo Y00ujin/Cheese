@@ -32,11 +32,17 @@ extension UIColor{
         return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
 }
+let size = UIScreen.main.bounds
 
 // MARK: - UIView animation extension
 extension UIView{
-    static func upAnimation(modal: UIView){
-        UIView.animate(withDuration: 0.5,
+    
+
+    
+    static func downAnimation(modal: UIView){
+        print("down")
+
+        UIView.animate(withDuration: 1,
                       delay: 0,
                       options: .curveEaseInOut,
                       animations: { () -> Void in

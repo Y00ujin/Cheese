@@ -24,7 +24,6 @@ final class CameraViewController: UIViewController {
         $0.register(FilterCollectionViewCell.self, forCellWithReuseIdentifier: FilterCollectionViewCell.reuseId)
         $0.register(FilterAddCollectionViewCell.self, forCellWithReuseIdentifier: FilterAddCollectionViewCell.reuseId)
         $0.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.4)
-        $0.isHidden = true
     }
     
     // MARK: - LifeCycles
@@ -57,7 +56,7 @@ final class CameraViewController: UIViewController {
             $0.width.equalToSuperview()
             $0.centerX.equalToSuperview()
             $0.height.equalToSuperview().dividedBy(3.15)
-            $0.bottom.equalTo(cameraBottomView.snp.top)
+            $0.top.equalTo(self.view.snp.bottom)
         }
         
         cameraHeaderView.snp.makeConstraints {
@@ -67,21 +66,49 @@ final class CameraViewController: UIViewController {
         }
         
         cameraBottomView.snp.makeConstraints {
-            $0.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.bottom.equalToSuperview()
             $0.left.right.equalToSuperview()
-            $0.height.equalToSuperview().dividedBy(9.49)
+            $0.height.equalToSuperview().dividedBy(6.49)
         }
     }
     
     // MARK: - Selectors
     @objc func filterButtonClicked(sender: UIButton){
         if cameraHeaderView.filterButtonClicked {
-            filterCollectionView.isHidden = true
+            downAnimation()
         }else{
-            filterCollectionView.isHidden = false
-            UIView.upAnimation(modal: filterCollectionView)
+            upAnimation()
         }
         cameraHeaderView.filterButtonClicked = !(cameraHeaderView.filterButtonClicked)
+    }
+    
+    private func upAnimation(){
+        filterCollectionView.snp.remakeConstraints{
+            $0.width.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.height.equalToSuperview().dividedBy(3.15)
+            $0.bottom.equalTo(cameraBottomView.snp.top)
+        }
+        
+        startAnimation()
+    }
+    
+    private func downAnimation(){
+        filterCollectionView.snp.remakeConstraints {
+            $0.width.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.height.equalToSuperview().dividedBy(3.15)
+            $0.top.equalTo(self.view.snp.bottom)
+        }
+        
+        startAnimation()
+    }
+    
+    private func startAnimation(){
+        UIView.animate(
+          withDuration: 0.5,
+          animations: self.view.layoutIfNeeded
+        )
     }
 }
 
