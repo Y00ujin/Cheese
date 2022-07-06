@@ -17,7 +17,7 @@ final class CameraBottomView: UIView {
         $0.layer.applyShadow(x: 0, y: -8, blur: 15)
     }
     
-    private lazy var cameraButton = UIButton().then{
+    lazy var cameraButton = UIButton().then{
         $0.setImage(UIImage(named: "Cheese_CameraButtonImage"), for: .normal)
     }
     
@@ -50,7 +50,7 @@ final class CameraBottomView: UIView {
         
         cameraButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalToSuperview().offset(size.height/40)
+            $0.top.equalToSuperview().offset(size.height/15)
             $0.width.height.equalTo(55)
         }
     }

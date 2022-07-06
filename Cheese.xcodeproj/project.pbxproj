@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A5B55142875CF4E00126649 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B55132875CF4E00126649 /* SaveViewController.swift */; };
+		6A5B55162875D6C900126649 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B55152875D6C900126649 /* ImageFileManager.swift */; };
 		6AE9DE502863361900C2B9D2 /* CameraHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE4F2863361900C2B9D2 /* CameraHeaderView.swift */; };
 		6AE9DE522863389400C2B9D2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE512863389400C2B9D2 /* Extension.swift */; };
 		6AE9DE55286354C500C2B9D2 /* CameraBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9DE54286354C500C2B9D2 /* CameraBottomView.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		56791ABA94BD87C99A6FF208 /* Pods_Cheese.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cheese.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5B55132875CF4E00126649 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
+		6A5B55152875D6C900126649 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
 		6AE9DE4F2863361900C2B9D2 /* CameraHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHeaderView.swift; sourceTree = "<group>"; };
 		6AE9DE512863389400C2B9D2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6AE9DE54286354C500C2B9D2 /* CameraBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBottomView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				6AE9DE662863F10500C2B9D2 /* FilterDrawViewController.swift */,
 				6AE9DE682863F10F00C2B9D2 /* FilterWriteViewController.swift */,
 				6AE9DE6A2863F11900C2B9D2 /* FilterPictureViewController.swift */,
+				6A5B55132875CF4E00126649 /* SaveViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				6AE9DE602863E8BE00C2B9D2 /* Controllers */,
 				6AE9DE5728635CC400C2B9D2 /* Cells */,
 				6AE9DE53286354AC00C2B9D2 /* Views */,
+				6A5B55152875D6C900126649 /* ImageFileManager.swift */,
 			);
 			path = Cheese;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 				6AF0D0192863306500848995 /* AppDelegate.swift in Sources */,
 				6AE9DE6B2863F11900C2B9D2 /* FilterPictureViewController.swift in Sources */,
 				6AE9DE742863FBAD00C2B9D2 /* SaveModalView.swift in Sources */,
+				6A5B55142875CF4E00126649 /* SaveViewController.swift in Sources */,
+				6A5B55162875D6C900126649 /* ImageFileManager.swift in Sources */,
 				6AE9DE6E2863F21D00C2B9D2 /* FilterHeaderView.swift in Sources */,
 				6AE9DE502863361900C2B9D2 /* CameraHeaderView.swift in Sources */,
 				6AE9DE55286354C500C2B9D2 /* CameraBottomView.swift in Sources */,

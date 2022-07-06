@@ -88,7 +88,6 @@ final class FilterWayChooseViewController: UIViewController{
         drawFilterButton.snp.makeConstraints {
             $0.top.equalTo(cheeseSubTitleLabel.snp.bottom).offset(size.height/20)
             $0.centerX.equalToSuperview()
-            $0.left.equalTo(cheeseTitleLabel.snp.left)
             $0.width.equalToSuperview().dividedBy(1.3)
             $0.height.equalToSuperview().dividedBy(7)
         }
@@ -96,7 +95,6 @@ final class FilterWayChooseViewController: UIViewController{
         writeFilterButton.snp.makeConstraints {
             $0.top.equalTo(drawFilterButton.snp.bottom).offset(size.height/40)
             $0.centerX.equalToSuperview()
-            $0.left.equalTo(cheeseTitleLabel.snp.left)
             $0.width.equalToSuperview().dividedBy(1.3)
             $0.height.equalToSuperview().dividedBy(7)
         }
@@ -104,7 +102,6 @@ final class FilterWayChooseViewController: UIViewController{
         pictureFilterButton.snp.makeConstraints {
             $0.top.equalTo(writeFilterButton.snp.bottom).offset(size.height/40)
             $0.centerX.equalToSuperview()
-            $0.left.equalTo(cheeseTitleLabel.snp.left)
             $0.width.equalToSuperview().dividedBy(1.3)
             $0.height.equalToSuperview().dividedBy(7)
         }
